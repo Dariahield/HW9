@@ -34,17 +34,15 @@ public class Main {
         int[] arr = generateRandomArray();
         System.out.println();
 
-        int maxArr = -1;
-        for (int i = 0; i < arr.length; i++) {
-            final int carrent = arr[i];
-            if (carrent > maxArr) {
-                maxArr = carrent;
-            }
-        }
+        int maxArr = 0;
         int minArr = 200000;
-        for (int i = arr.length - 1; i > 0; i--) {
-            if (arr[i] < minArr) {
-                minArr = arr[i];
+        for (int i = 0; i < arr.length; i++) {
+            final int arr1 = arr[i];
+            if (arr1 > maxArr) {
+                maxArr = arr1;
+            } else if (arr1 < minArr) {
+                minArr = arr1;
+
             }
         }
         System.out.println("«Минимальная сумма трат за день составила " + minArr + " рублей. Максимальная сумма " +
